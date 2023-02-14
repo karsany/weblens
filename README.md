@@ -8,8 +8,7 @@ WebLens is built on top of the ESP32 hardware platform and provides a flexible a
 The firmware is built on top of the popular PlatformIO framework. Additionally, WebLens is fully open source, which means you can customize the firmware to fit your needs or contribute to its development.
 
 
-![logo](https://raw.githubusercontent.com/karsany/weblens/main/ui/src/components/icon.svg)
-
+<img src="https://raw.githubusercontent.com/karsany/weblens/main/ui/src/components/icon.svg" alt="logo" width="128" />
 
 ## Features
 - [x] Capture still images
