@@ -1,8 +1,5 @@
-# ESPCam
+# weblens
 
-## TODO
+![logo](https://raw.githubusercontent.com/karsany/weblens/main/ui/src/components/icon.svg)
 
-- [ ] NTP date and time synchronization
-- [ ] unique device ID generation
-- [ ] onboarding process at first admin console start
-- [ ] doc
+Camrea app for ESP32-CAM (AiThinker)
