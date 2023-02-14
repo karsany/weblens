@@ -1,0 +1,5 @@
+#include "webserver.h"
+
+const char index_html[] PROGMEM = R"rawliteral(
+{{index_html}}
+)rawliteral";

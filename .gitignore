@@ -1,0 +1,4 @@
+.pio
+.vscode
+ui/indexhtml.cpp
+/src/version.cpp
