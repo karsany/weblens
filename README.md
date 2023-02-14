@@ -15,6 +15,7 @@ The firmware is built on top of the popular PlatformIO framework. Additionally, 
 - [x] Capture still images
 - [x] User-friendly web interface accessible from any device with a web browser
 - [x] Fully customizable and open source
+- [ ] Send still image to HTTP endpoint
 - [ ] Stream video over HTTP or RTSP protocols
 - [ ] Configurable resolution, quality, and frame rate
 
