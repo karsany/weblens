@@ -141,22 +141,22 @@ void initWifi()
         trySmartconfig(60);
     }
 
-    WiFi.setHostname("espcam-admin");
+    WiFi.setHostname("weblens-admin");
 
-    Serial.println("WiFi hostname: espcam-admin");
+    Serial.println("WiFi hostname: weblens-admin");
 
     Serial.println("WiFi Connected.");
     Serial.print("IP Address: ");
     Serial.println(WiFi.localIP());
 
-    if (!MDNS.begin("espcam"))
+    if (!MDNS.begin("weblens"))
     {
         Serial.println("Error starting mDNS");
         return;
     }
 
     MDNS.addService("http", "tcp", 80);
-    MDNS.addServiceTxt("http", "tcp", "name", "ESPCam Administration Console");
+    MDNS.addServiceTxt("http", "tcp", "name", "WebLens Administration Console");
 
-    Serial.println("mDNS hostname: espcam");
+    Serial.println("mDNS hostname: weblens");
 }
