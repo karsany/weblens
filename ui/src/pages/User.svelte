@@ -15,7 +15,7 @@
                 return response.json();
             })
             .then((data) => {
-                alert("Felhasználói adatok mentve");
+                alert("Settings saved successfully.");
             });
     }
 

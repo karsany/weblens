@@ -32,7 +32,7 @@
             })
             .then((data) => {
                 alert(
-                    "Beállítások törölve, az eszköz újraindul. Az eszköz újrapárosításra vár."
+                    "Settings reset to factory defaults. Please pair with your wifi."
                 );
                 delProgress = false;
             });
