@@ -118,14 +118,17 @@ table {
   }
 }
 
-input {
+input,
+textarea {
   outline: 0;
   border: 1px solid var(--color-lightGrey);
 }
 
 input[type="text"],
 input[type="date"],
-input[type="password"] {
+input[type="number"],
+input[type="password"],
+textarea {
   width: 300px;
   border-radius: 4px;
   padding: 0.5em 0.75em;

@@ -1,9 +1,10 @@
 <script>
-    let delProgress = false;
-    function login() {
+    import { onMount } from "svelte";
+
+    function saveSettings() {
         console.log(settings);
 
-        fetch("/api/user/save", {
+        fetch("/api/settings/picture_send/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -19,7 +20,12 @@
             });
     }
 
-    let settings = { pictureUrl: "", additionalFields: "" };
+    let settings = { pictureUrl: "", extraJson: "", interval: 60 };
+
+    onMount(async () => {
+        const response = await fetch("/api/settings/picture_send");
+        settings = await response.json();
+    });
 </script>
 
 <div class="card">
@@ -40,18 +46,33 @@
         </tr>
         <tr>
             <th>
-                <label for="additional_fields">Additional fields JSON</label>
+                <label for="extraJson">Additional fields JSON</label>
             </th>
             <td>
                 <textarea
-                    name="additional_fields"
-                    bind:value={settings.additionalFields}
+                    name="extraJson"
+                    bind:value={settings.extraJson}
+                />
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                <label for="picture_send_interval"
+                    >Send picture in minutes</label
+                >
+            </th>
+            <td>
+                <input
+                    type="number"
+                    name="picture_send_interval"
+                    bind:value={settings.interval}
                 />
             </td>
         </tr>
     </table>
 
     <footer class="is-right">
-        <button on:click={login}> Save </button>
+        <button on:click={saveSettings}> Save </button>
     </footer>
 </div>

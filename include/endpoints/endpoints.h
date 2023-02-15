@@ -10,4 +10,6 @@ void photoCaptureApi(AsyncWebServerRequest *request);
 
 void photoDownloadApi(AsyncWebServerRequest *request);
 
-void userSaveApi(AsyncWebServerRequest *request);
+void pictureSendSaveApi(AsyncWebServerRequest *request, uint8_t *data, size_t len, size_t index, size_t total);
+
+void pictureSendGetApi(AsyncWebServerRequest *request);
