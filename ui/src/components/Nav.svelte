@@ -9,7 +9,7 @@
     </div>
     <div class="nav-right">
         <a class="button" href="/">Dashboard</a>
-        <a class="button" href="/user">User settings</a>
+        <a class="button" href="/settings">User settings</a>
         <a class="button" href="/photo">Test</a>
     </div>
 </nav>

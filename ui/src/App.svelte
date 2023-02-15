@@ -2,14 +2,14 @@
 	import Nav from "./components/Nav.svelte";
 	import Dashboard from "./pages/Dashboard.svelte";
 	import Photo from "./pages/Photo.svelte";
-	import User from "./pages/User.svelte";
+	import Settings from "./pages/Settings.svelte";
 
 	import router from "page";
 
 	let page;
 
 	router("/", () => (page = Dashboard));
-	router("/user", () => (page = User));
+	router("/settings", () => (page = Settings));
 	router("/photo", () => (page = Photo));
 
 	router.start();
