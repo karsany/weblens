@@ -11,8 +11,6 @@ void pictureSendSaveApi(AsyncWebServerRequest *request, uint8_t *data, size_t le
 
     JsonObject doc = jsonDoc.as<JsonObject>();
 
-    Serial.println(doc["pictureUrl"].as<String>());
-
     Preferences preferences;
     preferences.begin("pictureSend", false);
 
@@ -24,6 +22,11 @@ void pictureSendSaveApi(AsyncWebServerRequest *request, uint8_t *data, size_t le
 
 
     request->send(200, "application/json", "{ \"status\": \"OK\" }");
+
+    Serial.println("Settings saved, restarting ESP....");
+
+    ESP.restart();
+
 }
 
 void pictureSendGetApi(AsyncWebServerRequest *request)

@@ -16,7 +16,7 @@
                 return response.json();
             })
             .then((data) => {
-                alert("Settings saved successfully.");
+                alert("Settings saved successfully. Restarting CAM module");
             });
     }
 
